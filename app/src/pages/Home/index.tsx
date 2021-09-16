@@ -189,6 +189,9 @@ const Home = () => {
       )}
       <div className={globalStyles.container}>
         <div className={styles.homeContainer}>
+        <button className={styles.rotateButton}>
+              <RotateIcon width={32} height={24} onClick={rotateGotchi} />
+            </button>
           <div className={styles.selectorContainer}>
             <GotchiSelector
               initialGotchiId={selectedAavegotchiId}
@@ -197,9 +200,7 @@ const Home = () => {
             />
           </div>
           <div className={styles.gotchiContainer}>
-            <button className={styles.rotateButton}>
-              <RotateIcon width={32} height={24} onClick={rotateGotchi} />
-            </button>
+            
             {selectedAavegotchiId ? (
               <GotchiSVG
                 side={gotchiSide}
